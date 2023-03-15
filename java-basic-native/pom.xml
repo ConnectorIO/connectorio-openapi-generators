@@ -23,7 +23,7 @@
   <parent>
     <groupId>org.connectorio.openapi.generators</groupId>
     <artifactId>parent</artifactId>
-    <version>5.4.0</version>
+    <version>5.4.1-SNAPSHOT</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
