@@ -29,7 +29,7 @@
 
   <groupId>org.connectorio.openapi</groupId>
   <artifactId>generators</artifactId>
-  <version>5.4.0-SNAPSHOT</version>
+  <version>5.4.0</version>
   <packaging>pom</packaging>
 
   <name>ConnectorIO - OpenAPI - Generators</name>
@@ -45,6 +45,7 @@
     <connection>scm:git:git@github.com:ConnectorIO/connectorio-openapi-generators.git</connection>
     <developerConnection>scm:git:git@github.com:ConnectorIO/connectorio-openapi-generators.git</developerConnection>
     <url>https://github.com/ConnectorIO/connectorio-openapi-generators</url>
+    <tag>openapi-generators-5.4.0</tag>
   </scm>
 
   <licenses>
