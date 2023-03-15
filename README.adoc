@@ -1,0 +1,54 @@
+# ConnectorIO OpenAPI generators
+
+This repository contains additional generators compatible with openapi-generator project.
+Main intent of provisioned generators is reduction of external dependencies in compiled code.
+
+At present two generators are available:
+
+- connectorio-java-basic-native (maven `org.connectorio.openapi.generators:java-basic-native`).
+It uses jackson and built-in java http client.
+- connectorio-jaxrs-client-builder (maven `org.connectorio.openapi.generators:java-jaxrs-client`).
+It uses jackson and JAXRS client api (work in progress).
+
+By using java-basic-native generator you can be sure that you get no extra dependencies beyond standard ones.
+This means no square-http, no apache-http-client or other flavors of it.
+
+## Usage
+
+Below example is intended for maven, use of openapi generator executable may require further adjustment:
+
+[source,xml]
+----
+<plugin>
+  <groupId>org.openapitools</groupId>
+  <artifactId>openapi-generator-maven-plugin</artifactId>
+  <version>5.4.0</version>
+  <executions>
+    <execution>
+    <goals>
+      <goal>generate</goal>
+    </goals>
+    </execution>
+  </executions>
+  <configuration>
+    ...
+    <generatorName>connectorio-java-basic-native</generatorName><!--1-->
+    ...
+  </configuration>
+  <dependencies>
+    <dependency>
+      <groupId>org.connectorio.openapi.generators</groupId>
+      <artifactId>java-basic-native</artifactId> <!--2-->
+      <version>${connectorio-openapi-generators.version}</version>
+    </dependency>
+  </dependencies>
+</plugin>
+----
+<1> Declaration of dedicated, non standard, code generator.
+<2> Extra dependency which populates maven plugin classpath.
+
+### License & Copyright
+
+This code is licensed under Apache Software License v2, see LICENSE file which is part of this repository.
+
+Copyright (c) 2022 ConnectorIO sp. z o.o.

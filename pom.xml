@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ - Copyright (C) 2022-2023 ConnectorIO Sp. z o.o.
+ -
+ - Licensed under the Apache License, Version 2.0 (the "License");
+ - you may not use this file except in compliance with the License.
+ - You may obtain a copy of the License at
+ -
+ -     http://www.apache.org/licenses/LICENSE-2.0
+ -
+ - Unless required by applicable law or agreed to in writing, software
+ - distributed under the License is distributed on an "AS IS" BASIS,
+ - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ - See the License for the specific language governing permissions and
+ - limitations under the License.
+ -
+ - SPDX-License-Identifier: Apache-2.0
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.connectorio</groupId>
+    <artifactId>connectorio-oss</artifactId>
+    <version>3</version>
+    <relativePath />
+  </parent>
+
+  <groupId>org.connectorio.openapi</groupId>
+  <artifactId>generators</artifactId>
+  <version>5.4.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>ConnectorIO - OpenAPI - Generators</name>
+  <description>Custom generators for OpenAPI generator used by ConnectorIO.</description>
+
+  <modules>
+    <module>parent</module>
+    <module>java-basic-native</module>
+    <module>java-jaxrs-client</module>
+  </modules>
+
+  <scm>
+    <connection>scm:git:git@github.com:ConnectorIO/connectorio-openapi-generators.git</connection>
+    <developerConnection>scm:git:git@github.com:ConnectorIO/connectorio-openapi-generators.git</developerConnection>
+    <url>https://github.com/ConnectorIO/connectorio-openapi-generators</url>
+  </scm>
+
+</project>
